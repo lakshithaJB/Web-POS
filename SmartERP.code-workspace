@@ -1,0 +1,40 @@
+{
+  "folders": [
+    { "name": "Root", "path": "." },
+    { "name": "POS PWA (frontend)", "path": "frontend/pos-pwa" },
+    { "name": "ERP Web (frontend)", "path": "frontend/erp-web" },
+    { "name": "Backend (.NET)", "path": "backend" }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "files.eol": "\n",
+    "typescript.tsdk": "frontend/pos-pwa/node_modules/typescript/lib",
+    "tailwindCSS.experimental.classRegex": [
+      ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ],
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+      "*.ts": "${capture}.js, ${capture}.d.ts",
+      "*.tsx": "${capture}.css",
+      "vite.config.*": "vite.config.*, tsconfig.*, .oxlintrc*",
+      "package.json": "package-lock.json, .npmrc, .nvmrc"
+    },
+    "git.enableSmartCommit": true,
+    "git.autofetch": true
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss",
+      "dsznajder.es7-react-js-snippets",
+      "ms-dotnettools.csharp",
+      "ms-dotnettools.csdevkit",
+      "ms-azuretools.vscode-docker",
+      "eamodio.gitlens",
+      "usernamehw.errorlens"
+    ]
+  }
+}

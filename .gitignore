@@ -1,0 +1,28 @@
+# Node
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+
+# .NET
+backend/bin/
+backend/obj/
+backend/*.user
+backend/.vs/
+backend/**/*.user
+backend/**/bin/
+backend/**/obj/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
