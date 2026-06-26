@@ -4,9 +4,9 @@ import { cn, formatCurrency } from '@/lib/utils'
 import { useBillStore, usePaymentTotal } from '@/store/billStore'
 import PaymentModal from '@/features/payment/PaymentModal'
 
-interface Props { className?: string }
+interface Props { className?: string; onCustomer?: () => void }
 
-export default function TotalsPanel({ className }: Props) {
+export default function TotalsPanel({ className, onCustomer }: Props) {
   const bill = useBillStore((s) => s.activeBill)
   const customer = useBillStore((s) => s.customer)
   const [showPayment, setShowPayment] = useState(false)
@@ -29,9 +29,12 @@ export default function TotalsPanel({ className }: Props) {
             </div>
           </div>
         ) : (
-          <div className="bg-gray-50 rounded-lg p-3 mb-3 text-center text-sm text-gray-400 cursor-pointer hover:bg-gray-100">
+          <button
+            onClick={onCustomer}
+            className="w-full bg-gray-50 rounded-lg p-3 mb-3 text-center text-sm text-gray-400 hover:bg-gray-100 hover:text-gray-600 transition-colors"
+          >
             + Attach Customer (F4)
-          </div>
+          </button>
         )}
       </div>
 
