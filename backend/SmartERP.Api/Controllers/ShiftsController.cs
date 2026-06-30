@@ -11,7 +11,7 @@ namespace SmartERP.Api.Controllers;
 [ApiController]
 [Route("api/shifts")]
 [Authorize]
-public class ShiftsController(IAppDbContext db, IJwtService jwt) : ControllerBase
+public class ShiftsController(IAppDbContext db) : ControllerBase
 {
     private static readonly object _blockLock = new();
     private const int BlockSize = 100;
